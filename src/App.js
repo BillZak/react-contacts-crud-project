@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Contact from './components/Contact';
+import ContactForm from './components/ContactForm'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state ={ contacts :[]}
+  }
+  handleAddContact = (newContact) => {
+    this.setState({ 
+        contacts: [...this.state.contacts,newContact] 
+    })
+  }
+
+
+  render() {
+   
+    const contacts = this.state.contacts.map((contacts,index) =>{
+            return(
+              <Contact contact={contacts} index={index}/>
+            )
+    })
+
+
+
+    return (
+      <>
+         <ContactForm addContact={this.handleAddContact}/>
+         {contacts}
+      </>
+    );
+  }
 }
 
 export default App;
+
