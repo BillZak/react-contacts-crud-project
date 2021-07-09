@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.form{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(228, 245, 245);
+    box-shadow: 1px 2px 5px  rgb(61, 59, 61);
+    align-items: center;
+    text-align: center;
+    border:none;
+    border-radius: 10px;
+    padding: 50px 100px;
+    margin: 50px 400px;
+    margin-bottom: 100px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    background-color: rgb(228, 245, 245);
+    border-bottom: 1px solid rgb(98, 51, 160);
+    border-radius: 3px;
+    margin: 15px 0px;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+input:focus{
+    outline: none;
+    background-color: #d2b5ee2a;
+}
+
+label{
+    font-size: 25px;
+    font-family: inherit;
+    color: rgba(76, 41, 121, 0.788);
+}
+
+button{
+    margin-top: 35px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #ac67ece8;
+    cursor: pointer;
+    color: white;
+}
+button:active{
+    background-color: lightpink;
+    transform: scale(0.9);
+}
