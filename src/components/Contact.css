@@ -1,0 +1,20 @@
+.contact{
+    border: 1px solid rgb(74, 95, 185);
+    background-color: rgb(168, 205, 248);
+    border-radius: 5px;
+    margin: 10px 400px;
+    padding: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: rgb(74, 95, 185);
+    padding: 10px 30px;
+    margin: 0 15px;
+}
+
+.btn-secondary{
+    background-color: rgb(190, 24, 24);
+    padding: 10px 20px;
+}
