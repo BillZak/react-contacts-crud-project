@@ -7,7 +7,7 @@ class ContactForm extends Component {
         this.state ={
             name : '',
             number : '',
-            loction : '',
+            location : '',
         }
     }
 
