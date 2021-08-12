@@ -7,7 +7,10 @@ import ContactList from './components/ContactList';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state ={ contacts :[]}
+    this.state ={ contacts :[
+      {name: 'Bill', number: '0299837737', location: 'kasoa'},
+        {name: 'Zack', number: '8488484848', location: 'accra'}
+    ]}
   }
   handleAddContact = (newContact) => {
     newContact.id = Math.random().toString();
