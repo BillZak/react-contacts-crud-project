@@ -5,13 +5,8 @@ import React, { Component } from 'react';
 import ContactList from './components/ContactList';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state ={ contacts :[
-      {name: 'Bill', number: '0299837737', location: 'kasoa'},
-        {name: 'Zack', number: '8488484848', location: 'accra'}
-    ]}
-  }
+
+
   handleAddContact = (newContact) => {
     newContact.id = Math.random().toString();
     this.setState({ 
@@ -36,9 +31,8 @@ class App extends Component {
   
     return (
       <>
-         <ContactForm addContact={this.handleAddContact}/>
-         <ContactList contacts= {this.state.contacts} deleteContact= {this.handleDeleteContact}
-          editContact={this.handleEditContact}/>
+         <ContactForm />
+         <ContactList />
       </>
     );
   }
