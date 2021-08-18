@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {addContact} from '../actions/contactActions'
+import { connect } from 'react-redux'
 import '../Form.css';
 
 class ContactForm extends Component {
@@ -52,4 +54,9 @@ class ContactForm extends Component {
     }
 }
 
-export default ContactForm;
+const mapDispatchToProps = {
+    addContact
+}
+
+
+export default connect(null,mapDispatchToProps)(ContactForm);
