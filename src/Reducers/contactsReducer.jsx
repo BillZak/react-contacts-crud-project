@@ -1,13 +1,11 @@
 const initialState = {
-     contacts :[
-        {name: 'Bill', number: '0299837737', location: 'kasoa'},
-        {name: 'Zack', number: '8488484848', location: 'accra'}
-    ]
+     contacts :[]
 };
-var contactsReducer = ( state = initialState,action) =>{
+
+const contactsReducer = ( state = initialState ,action) =>{
     switch(action.type){
-        case "SET_CONTACTS":
-        return {...state, username:action.payload};
+        case "ADD_CONTACT":
+        return {...state.contacts, contacts: [...state.contacts, action.payload]};
 
         default: return state;
     }
