@@ -8,7 +8,7 @@ import firebase from '../firebase/config'
 const store = createStore(contactsReducer , compose(
     applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
     reactReduxFirebase(firebase),
-    reduxFirestore(getFirestore)
+    reduxFirestore(firebase)
 ))
 
 export default store;
