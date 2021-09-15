@@ -1,9 +1,19 @@
+import { getFirestore } from "redux-firestore";
+
 export const addContact = ( newContact )=>{
-    newContact.id = Math.random().toString();
-    return{
-        type: "ADD_CONTACT",
-        payload: newContact,
-    }
+    //newContact.id = Math.random().toString();
+    return(dispatch, state, {getFirestore})=>{
+        getFirestore()
+        .collection('users')
+        .add(newContact).then((docs)=>{
+            console.log(docs);
+        });
+      };
+
+    //return{
+    //    type: "ADD_CONTACT",
+     //   payload: newContact,
+    //}
 }
 
 export const deleteContact = ( contactId ) =>{
