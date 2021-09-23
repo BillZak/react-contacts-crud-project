@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {addContact} from '../actions/contactActions'
+import {addContact, getAllContacts} from '../actions/contactActions'
 import { connect } from 'react-redux'
 import '../Form.css';
 
@@ -31,6 +31,9 @@ class ContactForm extends Component {
 
         
     }
+    componentDidMount(){
+        this.props.getAllContacts()
+    }
 
 
 
@@ -55,7 +58,8 @@ class ContactForm extends Component {
 }
 
 const mapDispatchToProps = {
-    addContact
+    addContact,
+    getAllContacts
 }
 
 
