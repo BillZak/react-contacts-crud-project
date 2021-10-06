@@ -23,10 +23,6 @@ export const deleteContact = ( contactId ) =>{
         getFirestore().collection('contacts').doc(contactId).delete()
         .then(()=>{})
       }
-    //return{
-    //    type: "DELETE_CONTACT",
-     //   payload: contactId
-    //}
 }
 
 export const editContact = ( updatedContact ) =>{
@@ -41,10 +37,7 @@ export const editContact = ( updatedContact ) =>{
             (error)=> {
                 console.error("Remove Contacts", error);
             }
-        )   
-    //return{
-    //    type: "EDIT_CONTACT",
-    //    payload: updatedContact
+        )  
     }
 }
 
