@@ -1,8 +1,6 @@
-import { useStore } from "react-redux";
-import { getFirestore } from "redux-firestore";
+
 
 export const addContact = ( newContact )=>{
-    //newContact.id = Math.random().toString();
     return(dispatch, state, {getFirestore})=>{
         getFirestore()
         .collection('contacts')
@@ -12,10 +10,6 @@ export const addContact = ( newContact )=>{
         });
       };
 
-    //return{
-    //    type: "ADD_CONTACT",
-     //   payload: newContact,
-    //}
 }
 
 export const deleteContact = ( contactId ) =>{
