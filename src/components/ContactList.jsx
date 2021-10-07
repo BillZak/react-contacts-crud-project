@@ -19,7 +19,7 @@ const ContactList = ({contacts,deleteContact,editContact}) => {
 
 const mapStateToProps = function(state){
     return{
-        contacts: state.contacts
+        contacts: state.contact.contacts
     }
 }
 
