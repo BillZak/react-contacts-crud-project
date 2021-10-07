@@ -1,8 +1,5 @@
-
-import ContactForm from './components/ContactForm'
-
 import React, { Component } from 'react';
-import ContactList from './components/ContactList';
+import Router from './Router';
 
 class App extends Component {
 
@@ -10,8 +7,7 @@ class App extends Component {
   
     return (
       <>
-         <ContactForm />
-         <ContactList />
+         <Router/>
       </>
     );
   }
